@@ -1,0 +1,55 @@
+﻿@model StockApp.Models.Purchase
+
+@{
+    ViewBag.Title = "change Items";
+}
+
+<div class="row">
+    <div class="card">
+        <div class="card-body">
+            <h3>@ViewData["Title"]</h3>
+            <form  method="post">
+                @*<div class="form-group">
+                <label class="text-muted" asp-for="ItemName"></label>
+                <select class="form-control" asp-for="ItemName" asp-items="@(new SelectList(Model.ItemName, "Id", "Name"))">
+                <option></option>
+                </select>
+                </div>
+
+                <div class="form-group">
+                <label class="text-muted" asp-for="StoreName"></label>
+                <select class="form-control" asp-for="StoreName" asp-items="@(new SelectList(Model.StoreName, "Id", "Name"))">
+                <option></option>
+                </select>
+                </div>*@
+                <div class="mt-3">
+                    <label class="form-label">Item Name</label>
+                    <input type="text" class="form-control" asp-for="ItemName" />
+                </div>
+                <div class="mt-3">
+                    <label class="form-label">Store Name</label>
+                    <input type="text" class="form-control" asp-for="StoreName" />
+                </div>
+                <div class="mt-3">
+                    <label class="form-label">price</label>
+                    <input type="number" class="form-control" asp-for="price" />
+                </div>
+                <div class="mt-3">
+                    <label class="form-label">Count</label>
+                    <input type="number" class="form-control" asp-for="count" />
+                </div>
+
+                <div class="mt-3">
+                    
+                    <button id="submitButton" class="btn btn-primary" type="Submit">Submit</button>
+                </div>
+
+
+            </form>
+
+
+        </div>
+    </div>
+
+</div>
+

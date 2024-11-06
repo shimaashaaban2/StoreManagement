@@ -1,0 +1,30 @@
+﻿@model StockApp.Models.Item
+
+
+
+
+
+
+
+
+
+
+
+@*<select class="form-control" asp-for="Name" asp-items="@(new SelectList(Model.Name, "Id", "Name"))">
+    <option></option>
+</select>*@
+
+
+@Html.DropDownList("Items", new SelectList(Model.Name, "ItemsID", "Items"),
+            new
+            {
+                @class = "select2 form-control",
+                
+                @oninput = "filterJobsByJobType(this.value)"
+            })
+
+@*@tabindex = "2",*@
+@*C:\Users\Shimaa Shaaban\Desktop\src\StockApp\StockApp\Views\Shared\_ItemList.cshtml*@
+
+<script src="~/Scripts/Item.js"></script>
+<script></script>

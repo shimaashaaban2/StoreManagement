@@ -1,0 +1,35 @@
+﻿@model StockApp.Models.Store
+@{
+    ViewBag.Title = "Edit Store";
+}
+
+<form  method="post" >
+
+    <div class="row">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>@ViewData["Title"]</h3>
+                        <div class="mt-3">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" asp-for="Name" />
+                        </div>
+                        <div class="mt-3">
+                            <label class="form-label">ItemName</label>
+                            <input type="text" class="form-control" asp-for="ItemName" />
+                        </div>
+                        <div class="mt-3">
+                            <label class="form-label">ItemCount</label>
+                            <input type="number" class="form-control" asp-for="ItemCount" />
+                        </div>
+
+                        <div class="mt-3">
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
